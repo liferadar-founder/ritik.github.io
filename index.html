@@ -11,34 +11,29 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#f5f7fa;color:#333;}
 
-/* NAV */
 .nav{
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:15px 30px;
 background:#0a2540;
 color:white;
 position:sticky;
 top:0;
-z-index:1000;
 }
-.nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px;}
+.nav a{color:white;text-decoration:none;margin-left:15px;}
 
-/* HERO */
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') center/cover;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
 }
-.hero h1{font-size:40px;}
 .btn{
 background:#25D366;
-padding:15px 25px;
+padding:12px 20px;
 border-radius:8px;
 text-decoration:none;
 color:white;
@@ -46,31 +41,27 @@ display:inline-block;
 margin-top:15px;
 }
 
-/* SECTION */
 .section{padding:60px 20px;text-align:center;}
-.section h2{margin-bottom:20px;}
-
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* CARD */
 .card{
 background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
 }
-.card:hover{transform:translateY(-5px);}
 
-/* IMAGE */
-.card img{width:100%;border-radius:10px;}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
 
-/* FOOTER */
 .footer{
 background:#0a2540;
 color:white;
@@ -78,7 +69,6 @@ text-align:center;
 padding:30px;
 }
 
-/* FLOAT BUTTON */
 .float{
 position:fixed;
 bottom:20px;
@@ -87,7 +77,6 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:22px;
 text-decoration:none;
 }
 </style>
@@ -99,24 +88,24 @@ text-decoration:none;
 <div class="nav">
 <h2>🚗 Apna Travels</h2>
 <div>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Cars</a>
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#cars">Cars</a>
+<a href="#contact">Contact</a>
 </div>
 </div>
 
 <!-- HERO -->
-<div class="hero">
+<div id="home" class="hero">
 <div>
 <h1>Travel Without Stress</h1>
 <p>Safe • Reliable • On Time</p>
-<a href="https://wa.me/919555964805?text=Hi%20I%20want%20to%20book%20a%20car" class="btn">Book Now</a>
+<a href="https://wa.me/919555964805" class="btn">Book Now</a>
 </div>
 </div>
 
 <!-- SERVICES -->
-<div class="section">
+<div id="services" class="section">
 <h2>Our Services</h2>
 <div class="grid">
 <div class="card">Local Trips</div>
@@ -127,61 +116,45 @@ text-decoration:none;
 </div>
 
 <!-- CARS -->
-<div class="section">
+<div id="cars" class="section">
 <h2>Our Cars</h2>
 <div class="grid">
 
 <div class="card">
-<img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/159099/swift-exterior-right-front-three-quarter.jpeg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/2018_Suzuki_Swift_SZ5_Boosterjet_SHVS_1.0.jpg">
 <p>Swift / Dzire</p>
 </div>
 
 <div class="card">
-<img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/51435/innova-crysta-exterior-right-front-three-quarter.jpeg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Toyota_Innova_Crysta_2.4_VX_%28Facelift%29.jpg">
 <p>Innova / Ertiga</p>
 </div>
 
 <div class="card">
-<img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/131825/scorpio-n-exterior-right-front-three-quarter.jpeg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Mahindra_Scorpio-N.jpg">
 <p>Scorpio / XUV</p>
 </div>
 
 <div class="card">
-<img src="https://5.imimg.com/data5/SELLER/Default/2023/6/315558676/LH/FE/XR/19219775/force-traveller-500x500.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Force_Traveller.jpg">
 <p>Travellers (14–32 Seater)</p>
 </div>
 
 </div>
 </div>
 
-<!-- WHY -->
-<div class="section">
-<h2>Why Choose Us</h2>
-<div class="grid">
-<div class="card">✔️ On-Time Guarantee</div>
-<div class="card">✔️ No Hidden Charges</div>
-<div class="card">✔️ Verified Drivers</div>
-<div class="card">✔️ Best Rates</div>
-</div>
-</div>
-
-<!-- REVIEWS -->
-<div class="section">
-<h2>Happy Clients</h2>
-<div class="grid">
-<div class="card">“Best service, highly recommended!”</div>
-<div class="card">“On time and very reliable”</div>
-<div class="card">“Affordable and smooth experience”</div>
-</div>
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h2>Contact Us</h2>
+<p>📞 +91 9555964805</p>
+<a href="https://wa.me/919555964805" class="btn">Chat on WhatsApp</a>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-<p>📩 Book your ride now</p>
-<a href="https://wa.me/919555964805" class="btn">Chat on WhatsApp</a>
+<p>© Apna Travels</p>
 </div>
 
-<!-- FLOAT BUTTON -->
 <a href="https://wa.me/919555964805" class="float">💬</a>
 
 </body>
