@@ -23,7 +23,7 @@ position:sticky;
 top:0;
 z-index:1000;
 }
-.nav a{color:white;text-decoration:none;margin-left:15px;}
+.nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px;}
 
 /* HERO */
 .hero{
@@ -35,7 +35,7 @@ align-items:center;
 text-align:center;
 color:white;
 }
-.hero h1{font-size:50px;}
+.hero h1{font-size:40px;}
 .btn{
 background:#25D366;
 padding:15px 25px;
@@ -88,28 +88,8 @@ color:white;
 padding:15px;
 border-radius:50%;
 font-size:22px;
+text-decoration:none;
 }
-
-/* POPUP */
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-}
-.popup-box{
-background:white;
-padding:25px;
-border-radius:10px;
-text-align:center;
-width:90%;
-max-width:400px;
-margin:20% auto;
-}
-
 </style>
 </head>
 
@@ -150,22 +130,27 @@ margin:20% auto;
 <div class="section">
 <h2>Our Cars</h2>
 <div class="grid">
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+<img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/159099/swift-exterior-right-front-three-quarter.jpeg">
 <p>Swift / Dzire</p>
 </div>
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d">
+<img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/51435/innova-crysta-exterior-right-front-three-quarter.jpeg">
 <p>Innova / Ertiga</p>
 </div>
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
-<p>Scorpio / SUV</p>
+<img src="https://imgd.aeplcdn.com/1200x900/n/cw/ec/131825/scorpio-n-exterior-right-front-three-quarter.jpeg">
+<p>Scorpio / XUV</p>
 </div>
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
-<p>Travellers</p>
+<img src="https://5.imimg.com/data5/SELLER/Default/2023/6/315558676/LH/FE/XR/19219775/force-traveller-500x500.jpg">
+<p>Travellers (14–32 Seater)</p>
 </div>
+
 </div>
 </div>
 
@@ -198,21 +183,6 @@ margin:20% auto;
 
 <!-- FLOAT BUTTON -->
 <a href="https://wa.me/919555964805" class="float">💬</a>
-
-<!-- POPUP -->
-<div id="popup" class="popup">
-<div class="popup-box">
-<h2>🚗 Need a Ride?</h2>
-<p>Book instantly on WhatsApp</p>
-<a href="https://wa.me/919555964805" class="btn">Book Now</a>
-</div>
-</div>
-
-<script>
-setTimeout(()=>{
-document.getElementById("popup").style.display="block";
-},4000);
-</script>
 
 </body>
 </html>
