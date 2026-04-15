@@ -1,68 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apna Travels</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#333;}
 
-body {
-  margin:0;
-  font-family: Arial;
-  background:#f5f5f5;
+/* NAV */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:#0a2540;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
 }
+.nav a{color:white;text-decoration:none;margin-left:15px;}
 
-/* HEADER */
-.header {
-  background:#0a2540;
-  color:white;
-  padding:40px 20px;
-  text-align:center;
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
 }
-
-.header h1 {
-  margin:0;
-  font-size:32px;
+.hero h1{font-size:50px;}
+.btn{
+background:#25D366;
+padding:15px 25px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+display:inline-block;
+margin-top:15px;
 }
 
 /* SECTION */
-.section {
-  padding:20px;
-  text-align:center;
-}
-
-/* CARDS */
-.card {
-  background:white;
-  margin:15px;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* BUTTON */
-.btn {
-  background:#25D366;
-  color:white;
-  padding:15px 25px;
-  border:none;
-  font-size:18px;
-  border-radius:8px;
-  text-decoration:none;
-  display:inline-block;
-  margin-top:15px;
-}
+.section{padding:60px 20px;text-align:center;}
+.section h2{margin-bottom:20px;}
 
 /* GRID */
-.grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-@media(max-width:600px){
-  .grid {
-    grid-template-columns:1fr;
-  }
+/* CARD */
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+/* IMAGE */
+.card img{width:100%;border-radius:10px;}
+
+/* FOOTER */
+.footer{
+background:#0a2540;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* FLOAT BUTTON */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+.popup-box{
+background:white;
+padding:25px;
+border-radius:10px;
+text-align:center;
+width:90%;
+max-width:400px;
+margin:20% auto;
 }
 
 </style>
@@ -70,51 +115,104 @@ body {
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <h1>🚗 Apna Travels</h1>
-  <p>Safe • Reliable • On Time</p>
-  <a href="https://wa.me/91XXXXXXXXXX" class="btn">Book on WhatsApp</a>
+<!-- NAV -->
+<div class="nav">
+<h2>🚗 Apna Travels</h2>
+<div>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Cars</a>
+<a href="#">Contact</a>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>Travel Without Stress</h1>
+<p>Safe • Reliable • On Time</p>
+<a href="https://wa.me/919555964805?text=Hi%20I%20want%20to%20book%20a%20car" class="btn">Book Now</a>
+</div>
 </div>
 
 <!-- SERVICES -->
 <div class="section">
-  <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card">Local & Outstation Trips</div>
-    <div class="card">Wedding Car Booking</div>
-    <div class="card">Family & Group Travel</div>
-    <div class="card">24x7 Service</div>
-  </div>
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card">Local Trips</div>
+<div class="card">Outstation Travel</div>
+<div class="card">Wedding Cars</div>
+<div class="card">24x7 Service</div>
+</div>
 </div>
 
 <!-- CARS -->
 <div class="section">
-  <h2>Our Cars</h2>
-  <div class="grid">
-    <div class="card">Swift • Baleno • Dzire</div>
-    <div class="card">Ertiga • Innova • Crysta</div>
-    <div class="card">Scorpio • Premium Cars</div>
-    <div class="card">Travellers (14–32 Seater)</div>
-  </div>
+<h2>Our Cars</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+<p>Swift / Dzire</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d">
+<p>Innova / Ertiga</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+<p>Scorpio / SUV</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
+<p>Travellers</p>
+</div>
+</div>
 </div>
 
-<!-- WHY US -->
+<!-- WHY -->
 <div class="section">
-  <h2>Why Choose Us</h2>
-  <div class="grid">
-    <div class="card">✔️ On-Time Guarantee</div>
-    <div class="card">✔️ No Hidden Charges</div>
-    <div class="card">✔️ Verified Drivers</div>
-    <div class="card">✔️ Best Rates</div>
-  </div>
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card">✔️ On-Time Guarantee</div>
+<div class="card">✔️ No Hidden Charges</div>
+<div class="card">✔️ Verified Drivers</div>
+<div class="card">✔️ Best Rates</div>
+</div>
+</div>
+
+<!-- REVIEWS -->
+<div class="section">
+<h2>Happy Clients</h2>
+<div class="grid">
+<div class="card">“Best service, highly recommended!”</div>
+<div class="card">“On time and very reliable”</div>
+<div class="card">“Affordable and smooth experience”</div>
+</div>
 </div>
 
 <!-- FOOTER -->
-<div class="header">
-  <p>📩 Contact us for instant booking</p>
-  <a href="https://wa.me/91XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
+<div class="footer">
+<p>📩 Book your ride now</p>
+<a href="https://wa.me/919555964805" class="btn">Chat on WhatsApp</a>
 </div>
+
+<!-- FLOAT BUTTON -->
+<a href="https://wa.me/919555964805" class="float">💬</a>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+<div class="popup-box">
+<h2>🚗 Need a Ride?</h2>
+<p>Book instantly on WhatsApp</p>
+<a href="https://wa.me/919555964805" class="btn">Book Now</a>
+</div>
+</div>
+
+<script>
+setTimeout(()=>{
+document.getElementById("popup").style.display="block";
+},4000);
+</script>
 
 </body>
 </html>
