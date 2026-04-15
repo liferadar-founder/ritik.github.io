@@ -1,181 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apna Travels</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{background:#f5f7fa;color:#333;scroll-behavior:smooth;}
-
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-background:#0a2540;
-color:white;
-position:sticky;
-top:0;
-z-index:1000;
-}
-.nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:500;
+body {
+  margin:0;
+  font-family: Arial;
+  background:#f5f5f5;
 }
 
-.hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
+/* NAVBAR */
+.nav {
+  background:#0a2540;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+  position:sticky;
+  top:0;
 }
 
-.hero h1{font-size:40px;}
-
-.btn{
-background:#25D366;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-display:inline-block;
-margin-top:20px;
-font-weight:600;
+.nav a {
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
 }
 
-.section{
-padding:60px 20px;
-text-align:center;
+/* HERO */
+.hero {
+  background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+  color:white;
+  text-align:center;
+  padding:100px 20px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:30px;
+.btn {
+  background:#25D366;
+  color:white;
+  padding:15px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:15px;
 }
 
-.card{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+/* SECTION */
+.section {
+  padding:40px 20px;
+  text-align:center;
 }
 
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:10px;
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-.footer{
-background:#0a2540;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
+/* CARD */
+.card {
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-font-size:18px;
+.card img {
+  width:100%;
+  border-radius:10px;
 }
+
+/* FOOTER */
+.footer {
+  background:#0a2540;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <div class="nav">
-<h2>🚗 Apna Travels</h2>
-<div>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#cars">Cars</a>
-<a href="#contact">Contact</a>
-</div>
+  <h2>🚗 Apna Travels</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#cars">Cars</a>
+    <a href="#contact">Contact</a>
+  </div>
 </div>
 
 <!-- HERO -->
-<div id="home" class="hero">
-<div>
-<h1>Travel Without Stress</h1>
-<p>Safe • Reliable • On Time</p>
-<a href="https://wa.me/919555964805" class="btn">Book Now</a>
-</div>
+<div class="hero" id="home">
+  <h1>Travel Without Stress</h1>
+  <p>Safe • Reliable • On Time</p>
+  <a href="https://wa.me/919555964805" class="btn">Book Now</a>
 </div>
 
 <!-- SERVICES -->
-<div id="services" class="section">
-<h2>Our Services</h2>
-<div class="grid">
-<div class="card">Local Trips</div>
-<div class="card">Outstation Travel</div>
-<div class="card">Wedding Cars</div>
-<div class="card">24x7 Service</div>
-</div>
+<div class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">Local Trips</div>
+    <div class="card">Outstation Travel</div>
+    <div class="card">Wedding Cars</div>
+    <div class="card">24x7 Service</div>
+  </div>
 </div>
 
 <!-- CARS -->
-<div id="cars" class="section">
-<h2>Our Cars</h2>
-<div class="grid">
+<div class="section" id="cars">
+  <h2>Our Cars</h2>
+  <div class="grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1549921296-3a6b0f09b7c1?auto=format&fit=crop&w=800&q=80">
-<p>Swift / Dzire</p>
-</div>
+    <div class="card">
+      <img src="swift.jpeg">
+      <p>Swift / Dzire</p>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80">
-<p>Innova / Ertiga</p>
-</div>
+    <div class="card">
+      <img src="innova.jpeg">
+      <p>Innova / Ertiga</p>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=800&q=80">
-<p>Scorpio / XUV</p>
-</div>
+    <div class="card">
+      <img src="scorpio.jpeg">
+      <p>Scorpio / XUV</p>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80">
-<p>Travellers (14–32 Seater)</p>
-</div>
+    <div class="card">
+      <img src="traveller.jpeg">
+      <p>Traveller (14–32 Seater)</p>
+    </div>
 
-</div>
+  </div>
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="section">
-<h2>Contact Us</h2>
-<p>📞 +91 9555964805</p>
-<a href="https://wa.me/919555964805" class="btn">Chat on WhatsApp</a>
+<div class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>📞 +91 9555964805</p>
+  <a href="https://wa.me/919555964805" class="btn">Chat on WhatsApp</a>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-<p>© Apna Travels</p>
+  © Apna Travels
 </div>
-
-<!-- FLOAT BUTTON -->
-<a href="https://wa.me/919555964805" class="float">💬</a>
 
 </body>
 </html>
