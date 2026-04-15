@@ -9,48 +9,65 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f5f7fa;color:#333;}
+
+body{background:#f5f7fa;color:#333;scroll-behavior:smooth;}
 
 .nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 30px;
 background:#0a2540;
 color:white;
 position:sticky;
 top:0;
+z-index:1000;
 }
-.nav a{color:white;text-decoration:none;margin-left:15px;}
+.nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
 
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') center/cover;
+background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
 }
+
+.hero h1{font-size:40px;}
+
 .btn{
 background:#25D366;
-padding:12px 20px;
+padding:12px 25px;
 border-radius:8px;
 text-decoration:none;
 color:white;
 display:inline-block;
-margin-top:15px;
+margin-top:20px;
+font-weight:600;
 }
 
-.section{padding:60px 20px;text-align:center;}
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
+margin-top:30px;
 }
 
 .card{
 background:white;
-padding:20px;
+padding:15px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
@@ -67,6 +84,7 @@ background:#0a2540;
 color:white;
 text-align:center;
 padding:30px;
+margin-top:40px;
 }
 
 .float{
@@ -78,6 +96,7 @@ color:white;
 padding:15px;
 border-radius:50%;
 text-decoration:none;
+font-size:18px;
 }
 </style>
 </head>
@@ -121,22 +140,22 @@ text-decoration:none;
 <div class="grid">
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/2018_Suzuki_Swift_SZ5_Boosterjet_SHVS_1.0.jpg">
+<img src="https://images.unsplash.com/photo-1549921296-3a6b0f09b7c1?auto=format&fit=crop&w=800&q=80">
 <p>Swift / Dzire</p>
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Toyota_Innova_Crysta_2.4_VX_%28Facelift%29.jpg">
+<img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80">
 <p>Innova / Ertiga</p>
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Mahindra_Scorpio-N.jpg">
+<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=800&q=80">
 <p>Scorpio / XUV</p>
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Force_Traveller.jpg">
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80">
 <p>Travellers (14–32 Seater)</p>
 </div>
 
@@ -155,6 +174,7 @@ text-decoration:none;
 <p>© Apna Travels</p>
 </div>
 
+<!-- FLOAT BUTTON -->
 <a href="https://wa.me/919555964805" class="float">💬</a>
 
 </body>
